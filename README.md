@@ -3,6 +3,17 @@
 
 **Skriv din rapport här!**
 
+För bytte jag namn på appen, det gjorde jag genom att gå in på values och string för att byta namn. Sedan efter det så gjorde jag så att
+telefonen har tillgång till nätverk genom att ge den permission. Tillsist skapade jag ett nytt element som heter webview och sedan efterdet
+gav jag det en Id så att man kan hämta det
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<WebView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/my_webView" />
+
+```
 _Du kan ta bort all text som finns sedan tidigare_.
 
 ## Följande grundsyn gäller dugga-svar:
