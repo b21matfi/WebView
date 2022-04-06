@@ -6,12 +6,19 @@
 För bytte jag namn på appen, det gjorde jag genom att gå in på values och string för att byta namn. Sedan efter det så gjorde jag så att
 telefonen har tillgång till nätverk genom att ge den permission. Tillsist skapade jag ett nytt element som heter webview och sedan efterdet
 gav jag det en Id så att man kan hämta det
+
+Skapade en privat element som hette webview jag hittade elementet med hjälp av idet som jag la på den efterdet så kopplade jag ihop webview och webviewclient ihop
+och tillsist la jag till java till appen.
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 <WebView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/my_webView" />
+
+      myWebView.setWebViewClient(my_WebClient);
+              myWebView = findViewById(R.id.my_WebView);
+              myWebView.getSettings().setJavaScriptEnabled(true);
 
 ```
 _Du kan ta bort all text som finns sedan tidigare_.
