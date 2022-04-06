@@ -15,16 +15,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    private WebView myWebView;
+     private WebView myWebView;
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
-        myWebView.loadUrl("https://www.google.se/?hl=sv");
+         myWebView.loadUrl("https://www.google.se/?hl=sv");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
-        myWebView.loadUrl("file:///android_asset/about.html");
+         myWebView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        myWebView = findViewById(R.id.my_webview);
-        myWebView.getSettings().setJavaScriptEnabled(true);
-        myWebView.setWebViewClient(new WebViewClient());
+         myWebView = findViewById(R.id.my_webview);
+         myWebView.getSettings().setJavaScriptEnabled(true);
+         myWebView.setWebViewClient(new WebViewClient());
 
         /*
         * Rename your App. Tip: Values->Strings X
@@ -90,13 +90,13 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
-            showExternalWebPage();
+             showExternalWebPage();
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
-            showInternalWebPage();
+             showInternalWebPage();
             return true;
         }
 
