@@ -9,6 +9,11 @@ gav jag det en Id så att man kan hämta det
 
 Skapade en privat element som hette webview jag hittade elementet med hjälp av idet som jag la på den efterdet så kopplade jag ihop webview och webviewclient ihop
 och tillsist la jag till java till appen.
+
+Det första jag gjorde var att framkalla både den externa länken samt den interna länken,
+Jag gjorde också att när man öppnar den externa länken så kommer man till google och den interna
+är en about.html.
+
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 <WebView
@@ -51,7 +56,8 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![](Googlescreen.png)
+![](Minweb.png)
 
 Läs gärna:
 

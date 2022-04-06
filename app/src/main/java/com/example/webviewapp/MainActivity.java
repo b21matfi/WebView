@@ -16,26 +16,27 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
-    private WebViewClient my_WebClient;
+
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        myWebView.loadUrl("https://www.google.se/?hl=sv");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        myWebView.setWebViewClient(my_WebClient);
-        myWebView = findViewById(R.id.my_WebView);
-        myWebView.getSettings().setJavaScriptEnabled(true);
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        myWebView = findViewById(R.id.my_webview);
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.setWebViewClient(new WebViewClient());
 
         /*
         * Rename your App. Tip: Values->Strings X
@@ -48,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
         * Create a new WebViewClient to attach to our WebView. This allows us toX
           browse the web inside our app.X
         -- Commit and push to your github fork
-        * Enable Javascript execution in your WebViewClient
-        * Enter the url to load in our WebView
+        * Enable Javascript execution in your WebViewClient X
+        * Enter the url to load in our WebView X
         -- Commit and push to your github fork
-        * Move the code that loads a URL into your WebView into the two methods
-          "showExternalWebPage()" and "showInternalWebPage()".
-        * Call the "showExternalWebPage()" / "showInternalWebPage()" methods
-          when you select menu options "External Web Page" or "Internal Web Page"
+        * Move the code that loads a URL into your WebView into the two methods X
+          "showExternalWebPage()" and "showInternalWebPage()". X
+        * Call the "showExternalWebPage()" / "showInternalWebPage()" methods X
+          when you select menu options "External Web Page" or "Internal Web Page" X
           respectively
         -- Commit and push to your github fork
         * Take two screenshots using the "Take a screenshot" tool in the AVD
@@ -89,11 +90,13 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+            showExternalWebPage();
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
 
