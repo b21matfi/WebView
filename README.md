@@ -1,7 +1,6 @@
 
 # Rapport
 
-**Skriv din rapport här!**
 
 För bytte jag namn på appen, det gjorde jag genom att gå in på values och string för att byta namn. Sedan efter det så gjorde jag så att
 telefonen har tillgång till nätverk genom att ge den permission. Tillsist skapade jag ett nytt element som heter webview och sedan efterdet
