@@ -1,31 +1,32 @@
 
 # Rapport
-
-
-För bytte jag namn på appen, det gjorde jag genom att gå in på values och string för att byta namn. Sedan efter det så gjorde jag så att
-telefonen har tillgång till nätverk genom att ge den permission. Tillsist skapade jag ett nytt element som heter webview och sedan efterdet
-gav jag det en Id så att man kan hämta det
-
-Skapade en privat element som hette webview jag hittade elementet med hjälp av idet som jag la på den efterdet så kopplade jag ihop webview och webviewclient ihop
-och tillsist la jag till java till appen.
+Jag bytte namn på appen, detta gjordes genom att "values". Andra saken jag gjorde på appen var att ge telefonen tillgång till nätverk, detta gjordes med hjälp av koden som man kan se i figur 1.
+Efterdet skapades en webview som man kan se i figur 2. Tillsist la jag till webviewn i min mainactivity, jag hämta webviewn genom att hämta IDet som man kan se i 
+figur 3. 
 
 Det första jag gjorde var att framkalla både den externa länken samt den interna länken,
 Jag gjorde också att när man öppnar den externa länken så kommer man till google och den interna
 är en about.html.
 
 ```
-<uses-permission android:name="android.permission.INTERNET" />
-<WebView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:id="@+id/my_webView" />
-
-      myWebView.setWebViewClient(my_WebClient);
-              myWebView = findViewById(R.id.my_WebView);
-              myWebView.getSettings().setJavaScriptEnabled(true);
+<uses-permission android:name="android.permission.INTERNET" />   
 
 ```
-_Du kan ta bort all text som finns sedan tidigare_.
+Figur 1
+```
+
+    <WebView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_webView" />
+```
+Figur 2 
+```
+myWebView.setWebViewClient(my_WebClient);
+              myWebView = findViewById(R.id.my_WebView);
+              myWebView.getSettings().setJavaScriptEnabled(true);
+```
+Figur 3
 
 ## Följande grundsyn gäller dugga-svar:
 
@@ -37,21 +38,7 @@ _Du kan ta bort all text som finns sedan tidigare_.
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
-```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
-```
+
 
 Bilder läggs i samma mapp som markdown-filen.
 
